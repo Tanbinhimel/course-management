@@ -1,0 +1,8 @@
+googleAuth:
+  clientID: '771566966603-21voordsqmcj2d83tveisuqouicvv825.apps.googleusercontent.com'
+  clientSecret: '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'
+  callbackURL: 'http://localhost:3030/api/auth/google/redirect'
+
+jwt:
+  secretOrKey: 'ruhimel30151'
+  expiresIn: 3600
