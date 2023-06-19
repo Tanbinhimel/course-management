@@ -6,3 +6,6 @@ googleAuth:
 jwt:
   secretOrKey: 'ruhimel30151'
   expiresIn: 3600
+
+cryptoJs:
+  secretKey: 'ruhimel30151'
