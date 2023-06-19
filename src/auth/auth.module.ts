@@ -8,6 +8,7 @@ import * as config from 'config';
 import { JwtStrategy } from './strategy/jwt.strategy';
 import { AuthRepository } from './auth.repository';
 import { CryptoJsService } from './utils/crypto-js.service';
+import { GoogleIdentityService } from './utils/google-identity.service';
 
 @Module({
   imports: [
@@ -26,6 +27,7 @@ import { CryptoJsService } from './utils/crypto-js.service';
     GoogleStrategy,
     JwtStrategy,
     CryptoJsService,
+    GoogleIdentityService,
   ],
 })
 export class AuthModule {}
