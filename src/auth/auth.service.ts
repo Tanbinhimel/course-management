@@ -2,6 +2,7 @@ import { BadRequestException, Injectable } from '@nestjs/common';
 
 import { CryptoJsService } from './utils/crypto-js.service';
 import { GoogleIdentityService } from './utils/google-identity.service';
+import { TokenPayload } from 'google-auth-library';
 @Injectable()
 export class AuthService {
   constructor(
@@ -17,7 +18,7 @@ export class AuthService {
       bearerToken.substring(7),
     );
 
-    const payload = await this.googleIdentityService.verifyToken(
+    const payload: TokenPayload = await this.googleIdentityService.verifyToken(
       decryptedIdToken,
     );
     console.log('token:', payload);
