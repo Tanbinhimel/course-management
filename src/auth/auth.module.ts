@@ -8,6 +8,7 @@ import * as config from 'config';
 import { JwtStrategy } from './strategy/jwt.strategy';
 import { AuthRepository } from './auth.repository';
 import { CryptoJsService } from './utils/crypto-js.service';
+import { GoogleIdentityService } from './utils/google-identity.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { User } from './entity/user.entity';
 
@@ -29,6 +30,7 @@ import { User } from './entity/user.entity';
     GoogleStrategy,
     JwtStrategy,
     CryptoJsService,
+    GoogleIdentityService,
   ],
 })
 export class AuthModule {}
