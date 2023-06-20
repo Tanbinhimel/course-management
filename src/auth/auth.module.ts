@@ -8,9 +8,12 @@ import * as config from 'config';
 import { JwtStrategy } from './strategy/jwt.strategy';
 import { AuthRepository } from './auth.repository';
 import { CryptoJsService } from './utils/crypto-js.service';
+import { TypeOrmModule } from '@nestjs/typeorm';
+import { User } from './entity/user.entity';
 
 @Module({
   imports: [
+    TypeOrmModule.forFeature([User]),
     JwtModule.register({
       secretOrPrivateKey: config.get('jwt').secretOrKey,
       signOptions: {
